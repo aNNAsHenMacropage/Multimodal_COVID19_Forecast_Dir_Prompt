@@ -1,0 +1,25 @@
+{
+  "arm": "blind",
+  "horizon": 14,
+  "window_id": "h14_w07478",
+  "prompt_strategy": "blind",
+  "context_strategy": "none",
+  "memory_rm": false,
+  "history_stat_sum": "none",
+  "rewrite": false,
+  "window_country": "Namibia",
+  "window_forecast_start": "2022-02-26",
+  "history_end_date": "2022-02-25",
+  "experiment_phase": "phase1_5",
+  "prompt_anonymized": false,
+  "prompt_version": "blind-v1",
+  "context_no_news": null,
+  "context_n_words": null,
+  "context_source": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are an expert epidemiologist with detailed knowledge of COVID-19 epidemiology. \n    \n    ## Task\n    Today is 2022-02-25. The forecast horizon covers 14 days starting from 2022-02-26.\n    - Generate exactly 10 independent probabilistic samples.\n    - Each sample represents one plausible future trajectory.\n    - Vary the samples to reflect genuine uncertainty.\n    - Provide a brief explaination for the samples generated\n\n    ## Output format\n    Respond with ONLY a JSON object. No explanation outside the JSON.\n    IMPORTANT: the \"samples\" array must contain EXACTLY 10 lists, each with EXACTLY 14 numbers.\n    {\n        \"samples\": [\n        [v1, v2, ..., v14],\n            ... (10 lists total, each with exactly 14 numbers)\n          ],\n        \"reasoning\": \"brief explanation\"\n        }\n\n        Now provide your actual forecast:"
+    }
+  ]
+}

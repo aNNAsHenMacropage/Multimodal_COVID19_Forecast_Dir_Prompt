@@ -1,0 +1,25 @@
+{
+  "arm": "history__none",
+  "horizon": 14,
+  "window_id": "h14_w04665",
+  "prompt_strategy": "history",
+  "context_strategy": "none",
+  "memory_rm": false,
+  "history_stat_sum": "none",
+  "rewrite": false,
+  "window_country": "Hungary",
+  "window_forecast_start": "2021-10-03",
+  "history_end_date": "2021-10-02",
+  "experiment_phase": "phase1_5",
+  "prompt_anonymized": true,
+  "prompt_version": "p15-v1",
+  "context_no_news": null,
+  "context_n_words": null,
+  "context_source": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are an expert epidemiologist with detailed knowledge of COVID-19 epidemiology.\n\n## Historical data: daily new COVID-19 cases in this country\nLast 128 of 512 observed days.\nSummary statistics of the full history: last_value=0\nRecent values: [448, 465, 0, 506, 174, 275, 315, 269, 300, 137, 81, 117, 179, 206, 199, 0, 0, 255, 57, 107, 113, 106, 0, 0, 202, 54, 91, 69, 66, 0, 0, 132, 34, 52, 32, 37, 0, 0, 65, 32, 44, 55, 44, 0, 0, 102, 17, 56, 49, 64, 0, 0, 139, 25, 56, 71, 85, 0, 0, 161, 26, 74, 65, 64, 0, 0, 155, 26, 59, 72, 52, 0, 0, 156, 35, 80, 86, 104, 0, 0, 188, 45, 109, 123, 0, 0, 0, 340, 82, 134, 180, 189, 0, 0, 521, 110, 194, 262, 247, 0, 0, 648, 130, 246, 345, 323, 0, 0, 873, 246, 371, 458, 479, 0, 0, 1072, 289, 501, 526, 531, 0, 0, 1183, 265, 546, 633, 679, 0]\n\n## Task\nThe historical data ends on day 0, a Saturday. The forecast horizon covers the next 14 days (day 1 to day 14).\n- Carefully use the historical data above to inform your forecast.\n- Generate exactly 10 independent probabilistic samples.\n- Each sample represents one plausible future trajectory.\n- Vary the samples to reflect genuine uncertainty.\n- Provide a brief explanation for the samples generated.\n\n## Output format\nRespond with ONLY a JSON object. No explanation outside the JSON.\nIMPORTANT: the \"samples\" array must contain EXACTLY 10 lists, each with EXACTLY 14 numbers.\n{\n  \"samples\": [\n    [v1, v2, ..., v14],\n    ... (10 lists total, each with exactly 14 numbers)\n  ],\n  \"reasoning\": \"brief explanation\"\n}\n\nNow provide your actual forecast:"
+    }
+  ]
+}

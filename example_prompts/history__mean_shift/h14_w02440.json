@@ -1,0 +1,25 @@
+{
+  "arm": "history__mean_shift",
+  "horizon": 14,
+  "window_id": "h14_w02440",
+  "prompt_strategy": "history",
+  "context_strategy": "none",
+  "memory_rm": false,
+  "history_stat_sum": "mean_shift",
+  "rewrite": false,
+  "window_country": "Costa Rica",
+  "window_forecast_start": "2021-10-16",
+  "history_end_date": "2021-10-15",
+  "experiment_phase": "phase1_5",
+  "prompt_anonymized": true,
+  "prompt_version": "p15-v1",
+  "context_no_news": null,
+  "context_n_words": null,
+  "context_source": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are an expert epidemiologist with detailed knowledge of COVID-19 epidemiology.\n\n## Historical data: daily new COVID-19 cases in this country\nLast 128 of 512 observed days.\nSummary statistics of the full history: mean=1070.7, std=721.0, min=5, max=3173, last 14 days: velocity=-83.4643, acceleration=14.3393, last_value=1170\nRecent values: [1900, 2187, 2041, 1852, 1642, 1196, 866, 1708, 1845, 1869, 1604, 1582, 1086, 797, 1525, 1903, 1743, 1739, 1563, 944, 792, 1857, 1777, 1602, 1666, 1435, 993, 690, 1488, 1279, 1847, 1544, 1396, 837, 785, 1569, 1653, 1576, 1500, 1269, 972, 742, 1354, 1532, 1802, 1139, 1143, 823, 614, 856, 1467, 1695, 1608, 1386, 960, 1020, 943, 1795, 1827, 1932, 1674, 1223, 888, 1882, 2128, 2002, 1821, 1792, 1184, 878, 1932, 2195, 2311, 2060, 2048, 1267, 1480, 2230, 2619, 2706, 2787, 2278, 1629, 1454, 2581, 2848, 2991, 2750, 2348, 2046, 1435, 2956, 2884, 2975, 2825, 2546, 1649, 1381, 1376, 2725, 2901, 2801, 2349, 1627, 1514, 2731, 2547, 2701, 2550, 2271, 1368, 1178, 2078, 2036, 2072, 1688, 2070, 1092, 881, 1506, 1614, 1617, 1368, 1255, 754, 565, 1319, 1170]\n\n## Task\nThe historical data ends on day 0, a Friday. The forecast horizon covers the next 14 days (day 1 to day 14).\n- Carefully use the historical data above to inform your forecast.\n- Generate exactly 10 independent probabilistic samples.\n- Each sample represents one plausible future trajectory.\n- Vary the samples to reflect genuine uncertainty.\n- Provide a brief explanation for the samples generated.\n\n## Output format\nRespond with ONLY a JSON object. No explanation outside the JSON.\nIMPORTANT: the \"samples\" array must contain EXACTLY 10 lists, each with EXACTLY 14 numbers.\n{\n  \"samples\": [\n    [v1, v2, ..., v14],\n    ... (10 lists total, each with exactly 14 numbers)\n  ],\n  \"reasoning\": \"brief explanation\"\n}\n\nNow provide your actual forecast:"
+    }
+  ]
+}
